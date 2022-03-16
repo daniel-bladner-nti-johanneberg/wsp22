@@ -1,7 +1,10 @@
-h1 Alla böcker 
 
 
-ol 
-    -books.each do |book|
+
+ol
+  - books.each do |book|
     li 
-        a href="affar/#{book['Name']}"
+      a href="affar/#{book['id']}" #{book["Name"]}      
+
+
+            test
