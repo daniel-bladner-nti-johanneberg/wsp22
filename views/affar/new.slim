@@ -5,3 +5,12 @@ form action="/affar/new" method="post"
     input type="text" name="book_stock" placeholder="Lagerstatus"
     input type="text" name="book_img" placeholder="Bild till bok"
     input type="submit" value="Skapa bok"
+
+ol
+  - books.each do |book|
+    li 
+      a href="affar/#{book['id']}" #{book["Name"]}
+      a href="/affar/new/#{book['id']}/edit"  Uppdatera
+
+
+            
