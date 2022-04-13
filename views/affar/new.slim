@@ -10,6 +10,7 @@ ol
   - books.each do |book|
     li 
       a href="affar/#{book['id']}" #{book["Name"]}
+      p Antal kvar #{book['Stock']}
       a href="/affar/new/#{book['id']}/edit"  Uppdatera
 
 
