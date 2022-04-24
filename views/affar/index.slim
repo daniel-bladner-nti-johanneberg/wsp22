@@ -1,6 +1,10 @@
+h1 Kategorier 
+ol
+  - genres.each do |genre|
+    li 
+      a href="/affar/kategori/#{genre['id']}/#{genre["name"]}" #{genre["name"]}
 
-
-
+h2 Alla böcker
 ol
   - books.each do |book|
     li 

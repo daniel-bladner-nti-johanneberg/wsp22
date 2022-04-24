@@ -1,0 +1,10 @@
+
+p #{result["Name"]}.
+p #{result["Stock"]}.
+img src="#{result["img"]}" alt="/"
+
+form action="/affar/#{result['id']}/bought" method="post"
+    input type="hidden" name="book_id" value="#{result['id']}"
+    input type="submit" value="Köp"
+
+            

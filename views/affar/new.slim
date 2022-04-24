@@ -1,6 +1,5 @@
 form action="/affar/new" method="post"
     input type="text" name="book_name" placeholder="Titel på bok"
-    input type="text" name="book_id" placeholder="id på bok"
     input type="text" name="book_price" placeholder="pris på bok"
     input type="text" name="book_stock" placeholder="Lagerstatus"
     input type="text" name="book_img" placeholder="Bild till bok"
@@ -9,9 +8,12 @@ form action="/affar/new" method="post"
 ol
   - books.each do |book|
     li 
-      a href="affar/#{book['id']}" #{book["Name"]}
+      p #{book["Name"]}
       p Antal kvar #{book['Stock']}
-      a href="/affar/new/#{book['id']}/edit"  Uppdatera
+      p Pris #{book['Price']}
 
+      a href="/affar/new/#{book['id']}/edit"  Uppdatera
+      form method="POST" action="/affar/new/#{book['id']}/delete" 
+        input type="submit" value="Delete"
 
             
