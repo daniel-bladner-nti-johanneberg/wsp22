@@ -130,6 +130,7 @@ post('/Login') do
   if BCrypt::Password.new(pwdigest) == password
     session[:id] = id
     session[:role] = role
+    session[:username] = username
     redirect('/user')
   else
     "FEL LÖSENORD NOOB!"
